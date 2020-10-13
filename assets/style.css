@@ -1,0 +1,109 @@
+:root {
+  --primary-blue: #1e90ff;
+  --second-blue: #4169e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--second-blue);
+}
+
+button {
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 05px;
+}
+
+.container .card {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  max-width: 900px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  padding: 10vh 0px;
+
+  box-shadow: 05px 05px rgba(0, 0, 0, 0.2);
+}
+
+.left img {
+  position: relative;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-50%);
+
+  width: 50vh;
+  border: none;
+  color: #ffffff;
+  background-color: var(--primary-blue);
+}
+
+.right form {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.right label {
+  color: #000000;
+  padding: 10px;
+  text-align: left;
+}
+
+.right input {
+  border: none;
+  border-radius: 05px;
+  padding: 10px 20px;
+  box-shadow: 03px 03px rgba(0, 0, 0, 0.2);
+  background-color: rgb(249, 249, 249);
+}
+
+.right p {
+  margin-top: 10px;
+}
+
+.right button {
+  margin-top: 20px;
+  color: #ffffff;
+  border: none;
+  background-color: var(--primary-blue);
+}
+
+.right button:hover {
+  transition: 0.2s;
+  opacity: 0.9;
+}
+
+.right button:focus {
+  box-shadow: 01px 01px 15px var(--primary-blue);
+}
+
+.error {
+  border: 2px solid red !important;
+}
+
+@media (max-width: 650px) {
+  .left {
+    display: none;
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+  }
+}
